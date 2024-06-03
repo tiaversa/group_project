@@ -1,3 +1,127 @@
+/* color palette: https://colorhunt.co/palette/03aed268d2e8fdde55feefad */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Futura BdCn BT', sans-serif;
+    color: var(--darkBlue);
+}
+body{
+    overflow-x: hidden;
+}
+/* Explicitly set the grid */
+.grid-container-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "price1 price2 price3"
+        "testimonies testimonies testimonies"
+        "attraction1des attraction1img attraction1img"
+        "attraction2des attraction2img attraction2img"
+        "attraction3des attraction3img attraction3img"
+        "footer footer footer";
+    gap: 10px; /* Optional: use this to space out the grid items */
+    background-color: aquamarine;
+    padding: 10px; /* Optional: use this to add padding around the grid container */
+}
+
+/* Define grid areas */
+nav {
+    grid-area: nav;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    width: 100%;
+    min-height: 40px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: snow;
+    padding: 5px 20px;
+}
+
+nav ul {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    list-style-type: none;
+}
+
+nav li {
+    position: relative;
+    display:flex;
+    padding: 5px;
+    justify-content: space-around;
+    width: 45%;
+    list-style-type: none;
+}
+
+header {
+    grid-area: header;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+footer {
+    grid-area: footer;
+    height: 100px;
+    background-color: #FEEFAD;
+}
+
+#testimonies {
+    grid-area: testimonies;
+    background-color: #0073e6;
+}
+
+/* Grid area for price items */
+#price1 {
+    grid-area: price1;
+    background-color: #FEEFAD;
+}
+
+#price2 {
+    grid-area: price2;
+}
+
+#price3 {
+    grid-area: price3;
+}
+
+/* Grid area for attractions */
+#att1 img {
+    grid-area: attraction1img;
+}
+
+#att1 .att-description {
+    grid-area: attraction1des;
+}
+
+#att2 img {
+    grid-area: attraction2img;
+}
+
+#att2 .att-description {
+    grid-area: attraction2des;
+}
+
+#att3 img {
+    grid-area: attraction3img;
+}
+
+#att3 .att-description {
+    grid-area: attraction3des;
+}
+
+/* Styling individual items */
 .small-image {
     width: 350px;
     height: auto;
@@ -29,4 +153,3 @@
 .button:hover {
     background-color: #005bb5;
 }
-
