@@ -95,6 +95,24 @@ footer {
     background-color: #FEEFAD;
 }
 
+footer ul {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    list-style-type: none;
+}
+
+footer li {
+    position: relative;
+    display:flex;
+    padding: 5px;
+    justify-content: space-around;
+    width: 45%;
+    list-style-type: none;
+}
+
 #testimonies {
     grid-area: testimonies;
     background-color: #0073e6;
@@ -113,8 +131,59 @@ footer {
     grid-area: price3;
 }
 
+.price-item {
+    padding: 10px;
+    background-color: #68D2E8;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.price-item h3 {
+    font-size: large;
+}
+
+.price-amount {
+    font-style: italic;
+}
+
+.price-list {
+    padding: 10px;
+    font-size: normal;
+}
+
+.price-button {
+    margin: 10px;
+    background-color: #FEEFAD;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+.price-button:hover{
+    background-color: #FDDE55;
+}
+
+.price-button a {
+    text-decoration: none;
+}
+
+.price-button a:hover {
+    text-decoration: underline;
+    color: #03AED2;
+}
+
+
 .attraction {
     text-align: center;
+    padding: 2rem;
+    background-color: rgb(255, 249, 208, 0.6);
+    margin: 10px;
+}
+.attraction h3 {
+    font-size: large;
+    margin: 10px;
 }
 
 /* Grid area for attractions */
@@ -125,7 +194,6 @@ footer {
 
 #att1desc {
     grid-area: attraction1des;
-    background-color: #FEEFAD;
 }
 
 #att2img {
@@ -148,8 +216,15 @@ footer {
 
 /* Styling individual items */
 .small-image {
-    width: 350px;
+    align-items: center;
+}
+
+.small-image img {
+    width: 100%;
     height: auto;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 .header-image {
@@ -173,6 +248,7 @@ footer {
     text-decoration: none;
     text-align: center;
     cursor: pointer;
+    margin: 10px;
 }
 
 .button:hover {
@@ -299,7 +375,7 @@ footer {
 }
 .slider__caption {
   font-weight: 500;
-  margin: -1rem 0 1rem;
+  margin: -2rem 0 1rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
 }

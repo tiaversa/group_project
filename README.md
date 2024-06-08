@@ -23,3 +23,7 @@ Agree within your group the structure of your web site, with the aim of designin
 ### Design the wireframes for the web site
 
 Produce a set of wireframes for the site, showing the concepts for both a wide screen and small screen. These can either be drawn by hand or produced using a tool such as PowerPoint or a graphics package such as Illustrator. Avoid painting or photo-editing software such as Paint or Photoshop as designs produced in this way are difficult to edit. Ensure that the designs are clear and easy to read.
+
+
+Image sources:
+https://www.pexels.com/search/night%20amusement%20park/
