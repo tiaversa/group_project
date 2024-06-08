@@ -4,74 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 121 Park</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <div class="grid-container-index">
+        <nav class="nav">
             <img src="img/park-image.jpg" alt="Logo" class="icon">
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Attractions</a></li>
-                <li><a href="#">Tickets</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#price1">Tickets</a></li>
+                <li><a href="#slider">Testimonies</a></li>
+                <li><a href="#att1desc">Attractions</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <div id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
-    </header>
 
-    <main>
-        <div class="header">
-            <img src="img/park-image.jpg" alt="Park Image" class="mid-image">
-        </div>
+        <header class="header">
+            <img src="img/park-image.jpg" alt="Park Image" class="header-image">
+            <section class="description">
+                <h1>Team Park</h1>
+                <p>Welcome to Team Park, where magic meets excitement and adventure awaits around every corner! Nestled in a sprawling landscape of lush greenery and vibrant attractions, Team Park promises an unforgettable experience for families, thrill-seekers, and adventurers of all ages.</p>
+                <p>Explore the wonders of our theme park with a variety of thrilling rides and beautiful scenery. Perfect for families and adventure seekers.</p>
+            </section>
+        </header>
 
-        <section class="description">
-            <h1>Park Description</h1>
-            <p>Explore the wonders of our theme park with a variety of thrilling rides and beautiful scenery. Perfect for families and adventure seekers.</p>
-        </section>
-
-        <div class="price-div">
-            <img src="img/price-image.jpg" alt="Price Image">
-        </div>
-
-        <div class="testimonies">
-            <p><i>"The best theme park I have ever visited! The rides are exciting and there's something for everyone."</i></p>
-            <p>John Harvard, Google Reviews</p>
-        </div>
-
-        <section class="attractions-div">
-            <div class="attraction">
-                <h3>High Flyer's Hat <a href="high-flyers.html" class="button">Explore now</a></h3>
-                <img src="img/high-flyer.jpg" alt="High Flyer's Hat" class="small-image">
+        <div id="price1" class="price-item">
+            <h3>1 Day Ticket 2024</h3>
+            <div class="price-amount">
+                <p>Price per Person</p>
+                <h4>EUR 39</h4>
             </div>
-            <div class="attraction">
-                <h3>Jungle Expedition <a href="jungle-expedition.html" class="button">Explore now</a></h3>
-                <img src="img/jungle-expedition.jpg" alt="Jungle Expedition" class="small-image">
+            <div class="price-image">
+                <img src="img/person-on-park.jpg" alt="Price Option 1 Image" class="mid-image">
+                <h4>For a memorable day of fun</h4>
             </div>
-        </section>
+            <ul class="price-list">
+                <li>Access to all rides in the park for a full day</li>
+                <li>Parking included</li>
+            </ul>
+            <div  class="price-button"><a href="#">Buy Now</a></div>
+        </div>
 
-        <section class="attraction-2-div">
-            <div class="attraction">
-                <h3>Twister Coaster <a href="#" class="button">Explore now</a></h3>
-                <img src="img/twister-coaster.jpg" alt="Twister Coaster" class="small-image">
+        <div id="price2" class="price-item">
+            <h3>Family Ticket 2024</h3>
+            <div class="price-amount">
+                <p>Price per Person</p>
+                <h4>EUR 39</h4>
             </div>
-        </section>
-    </main>
+            <div class="price-image">
+                <img src="img/family-on-park.jpg" alt="Price Option 1 Image" class="mid-image">
+                <h4>For an amazing family time</h4>
+            </div>
+            <ul class="price-list">
+                <li>Access to all rides in the park for a full day</li>
+                <li>Parking included</li>
+            </ul>
+            <div  class="price-button"><a href="#">Buy Now</a></div>
+        </div>
 
-    <footer>
-        <div class="footer-links">
-            <a href="#">Contact</a>
-            <a href="#">About Us</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Careers</a>
-            <a href="#">FAQ</a>
+        <div id="price3" class="price-item">
+            <h3>Night Only Ticket 2024</h3>
+            <div class="price-amount">
+                <p>Price per Person</p>
+                <h4>EUR 39</h4>
+            </div>
+            <div class="price-image">
+                <img src="img/night-on-park.jpg" alt="Price Option 1 Image" class="mid-image">
+                <h4>For a night of magical experiences</h4>
+            </div>
+            <ul class="price-list">
+                <li>Access to all rides in the park for a full day</li>
+                <li>Parking included</li>
+            </ul>
+            <div  class="price-button"><a href="#">Buy Now</a></div>
         </div>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
-            <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
-            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+
+        <!-- Slider code from https://codepen.io/maheshambure21/pen/qZZrxy -->
+        <div class="slider" id="slider">
+            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+            <div class="slider__inner">
+              <div class="slider__contents"><i class="slider__image fa fa-codepen"></i>
+                <h2 class="slider__caption">codepen</h2>
+                <p class="slider__txt">"The best theme park I have ever visited! The rides are exciting and there's something for everyone."</p>
+                <p class="person-name">John Harvard, Google Reviews</p>
+              </div>
+              <div class="slider__contents"><i class="slider__image fa fa-newspaper-o"></i>
+                <h2 class="slider__caption">newspaper</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <p class="person-name">John Harvard, Google Reviews</p>
+              </div>
+              <div class="slider__contents"><i class="slider__image fa fa-television"></i>
+                <h2 class="slider__caption">television</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <p class="person-name">John Harvard, Google Reviews</p>
+              </div>
+              <div class="slider__contents"><i class="slider__image fa fa-diamond"></i>
+                <h2 class="slider__caption">diamond</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <p class="person-name">John Harvard, Google Reviews</p>
+              </div>
+            </div>
+          </div>
+
+        <div id="att1desc" class="attraction">
+            <h3>High Flyer's Hat </h3>
+            <p>Saddle up for an unforgettable adventure on the Whirling Cowboy Hat, our signature swing ride that puts a wild west twist on classic amusement park fun! Towering high with a whimsical giant cowboy hat as its centerpiece, this ride elevates your classic swing experience to new heights.</p>
+            <a href="high-flyers.html" class="button">Explore now</a>
         </div>
-    </footer>
+        <div id="att1img" class="small-image"><img  src="img/high-flyer.jpg" alt="High Flyer's Hat"></div>
+        <div id="att2desc" class="attraction">
+            <div class="att-description"></div>
+            <h3>Jungle Expedition </h3>
+            <p>Embark on an unforgettable adventure through the heart of the wild on the Jungle Expedition ride! Navigate through exotic landscapes, dense rainforest, and hidden secrets as you immerse yourself in a thrilling jungle exploration.</p>
+            <a href="jungle-expedition.html" class="button">Explore now</a>
+        </div>
+        <div id="att2img" class="small-image"><img  src="img/jungle-expedition.jpg" alt="High Flyer's Hat"></div>
+        <div id="att3desc" class="attraction">
+            <h3>Twister Coaster </h3>
+            <p>Get ready to feel the surge of adrenaline on the Twister Coaster – the ultimate thrill ride in our amusement park! Boasting breathtaking drops, gravity-defying loops, and heart-pounding twists, this state-of-the-art roller coaster is not for the faint of heart.</p>
+            <a href="#" class="button">Explore now</a>
+        </div>
+        <div id="att3img" class="small-image"><img  src="img/twister-coaster.jpg" alt="High Flyer's Hat"></div>
+        
+        <footer id="footer">
+            <ul id="contact">
+                <li><a href="https://mail.google.com/mail/u/0/">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+            <ul id="social-media">
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>
