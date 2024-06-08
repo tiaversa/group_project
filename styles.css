@@ -8,7 +8,7 @@
     color: var(--darkBlue);
 }
 body{
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background-color: #03AED2;
 }
 /* Explicitly set the grid */
