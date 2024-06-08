@@ -28,6 +28,10 @@ body{
     justify-content: space-evenly;
 }
 
+img {
+    width: 100%;
+}
+
 nav {
     grid-area: nav;
     flex-direction: row;
