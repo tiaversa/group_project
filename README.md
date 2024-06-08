@@ -1,3 +1,5 @@
+To view the master branch of the website working [click here](https://tiaversa.github.io/group_project/).
+
 # group_project
 Utilising GitHub to align the group project.
 
