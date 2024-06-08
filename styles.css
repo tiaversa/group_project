@@ -14,18 +14,19 @@ body{
 .grid-container-index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
         "nav nav nav"
         "header header header"
         "price1 price2 price3"
         "testimonies testimonies testimonies"
         "attraction1des attraction1img attraction1img"
-        "attraction2des attraction2img attraction2img"
+        "attraction2img attraction2img attraction2des"
         "attraction3des attraction3img attraction3img"
         "footer footer footer";
-    gap: 10px; /* Optional: use this to space out the grid items */
-    background-color: aquamarine;
-    padding: 10px; /* Optional: use this to add padding around the grid container */
+        background-color: aquamarine;
+        justify-content: space-evenly;
+        row-gap: 15px;
 }
 
 /* Define grid areas */
@@ -85,7 +86,6 @@ footer {
 /* Grid area for price items */
 #price1 {
     grid-area: price1;
-    background-color: #FEEFAD;
 }
 
 #price2 {
@@ -97,28 +97,33 @@ footer {
 }
 
 /* Grid area for attractions */
-#att1 img {
+#att1img {
     grid-area: attraction1img;
+    justify-self: end;
 }
 
-#att1 .att-description {
+#att1desc {
     grid-area: attraction1des;
+    justify-self: center;
 }
 
-#att2 img {
+#att2img {
     grid-area: attraction2img;
 }
 
-#att2 .att-description {
+#att2desc {
     grid-area: attraction2des;
+    justify-self: center;
 }
 
-#att3 img {
+#att3img {
     grid-area: attraction3img;
+    justify-self: end;
 }
 
-#att3 .att-description {
+#att3desc {
     grid-area: attraction3des;
+    justify-self: center;
 }
 
 /* Styling individual items */
