@@ -8,7 +8,7 @@
     color: var(--darkBlue);
 }
 body{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: #03AED2;
 }
 /* Explicitly set the grid */
@@ -26,7 +26,6 @@ body{
         "attraction3des attraction3img attraction3img"
         "footer footer footer";
     justify-content: space-evenly;
-    /* row-gap: 15px; */
 }
 
 nav {
@@ -93,6 +92,7 @@ footer {
     grid-area: footer;
     height: 100px;
     background-color: #FEEFAD;
+    border-radius: 10px 10px 0px 0px;
 }
 
 footer ul {
@@ -186,6 +186,26 @@ footer li {
     margin: 10px;
 }
 
+#attractions {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+#attractions h3{
+    font-size: large;
+    margin: 15px;
+}
+
+#attractions div {
+    border-radius: 20px;
+    padding: 10px;
+    width: 49%;
+    height: auto;
+    background-color: rgb(202, 244, 255, 0.4);
+    text-align: center;
+}
+
 /* Grid area for attractions */
 #att1img {
     grid-area: attraction1img;
@@ -268,6 +288,24 @@ footer li {
     text-align: center;
     margin-bottom: 1rem;
 }
+
+.specs-div {
+    padding: 1rem;
+}
+
+.testimonies {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: #FEEFAD;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonies .name{
+    text-align: right;
+}
+
 
 /* Slider code from https://codepen.io/maheshambure21/pen/qZZrxy */
 
