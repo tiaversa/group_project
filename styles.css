@@ -7,10 +7,12 @@
     font-family: 'Futura BdCn BT', sans-serif;
     color: var(--darkBlue);
 }
+
 body{
     overflow-x: hidden;
-    background-color: #03AED2;
+    background: linear-gradient(to bottom, #000e1d, #03AED2);
 }
+
 /* Explicitly set the grid */
 .grid-container-index {
     display: grid;
@@ -25,7 +27,6 @@ body{
         "attraction2img attraction2img attraction2des"
         "attraction3des attraction3img attraction3img"
         "footer footer footer";
-    justify-content: space-evenly;
 }
 
 img {
@@ -41,13 +42,13 @@ nav {
     z-index: 999;
     left: 0;
     width: 100%;
-    min-height: 40px;
-    max-height: 50px;
+    min-height: 80px;
+    max-height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 20px;
-    background-color: rgb(3, 174, 210, 0.6);
+    background-color: rgba(3, 174, 210, 0.6); 
 }
 
 nav ul {
@@ -57,6 +58,7 @@ nav ul {
     justify-content: space-around;
     padding: 5px;
     list-style-type: none;
+    color: white;
 }
 
 nav li {
@@ -70,36 +72,44 @@ nav li {
 
 nav li:hover {
     background-color: rgb(3, 174, 210);
+    color: #FEEFAD;
+    text-decoration: underline;
 }
 
 nav a:link {
     color: #FDDE55;
     text-decoration: none;
-}
-
-nav a:hover {
-    color: #FEEFAD;
-    text-decoration: underline;
-}
-
-nav a:active {
-    color: #68D2E8;
-    text-decoration: underline;
+    position: center;
+    font-size: 25px;
 }
 
 header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+
 footer {
     grid-area: footer;
-    height: 100px;
-    background-color: #FEEFAD;
+    height: 200px;
+    background-color: #000e1d;
     border-radius: 10px 10px 0px 0px;
+    color: white;
 }
 
 footer ul {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     width: 90%;
     display: flex;
     align-items: center;
@@ -115,58 +125,77 @@ footer li {
     justify-content: space-around;
     width: 45%;
     list-style-type: none;
-}
-
-#testimonies {
-    grid-area: testimonies;
-    background-color: #0073e6;
+    font-size: 20px;
 }
 
 /* Grid area for price items */
 #price1 {
     grid-area: price1;
+    margin-left: 10rem;
 }
 
 #price2 {
     grid-area: price2;
+    margin-right: 5rem;
+    margin-left: 5rem;
 }
 
 #price3 {
     grid-area: price3;
+    margin-right: 10rem;
 }
 
 .price-item {
     padding: 10px;
-    background-color: #68D2E8;
+    background-color: #FFFFFF;
     margin: 5px;
     align-items: center;
     text-align: center;
+    border-style: dotted;
 }
 
 .price-item h3 {
-    font-size: large;
+    font-size: 40px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
-.price-amount {
+.price-amount p {
     font-style: italic;
+    font-size: 30px;
+    margin-bottom: 0.3rem;
+}
+
+.price-amount h4 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.price-image h4 {
+    font-size: 20px;
+    margin-top: 2rem;
 }
 
 .price-list {
     padding: 10px;
-    font-size: normal;
+    font-size: 20px;
+    list-style-type: none;
 }
 
 .price-button {
     margin: 10px;
-    background-color: #FEEFAD;
+    background-color: darkblue;
+    color: white;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    font-size: medium;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .price-button:hover{
     background-color: #FDDE55;
+    color: black;
 }
 
 .price-button a {
@@ -178,26 +207,37 @@ footer li {
     color: #03AED2;
 }
 
-
 .attraction {
-    text-align: center;
+    display: flex; /* Make the container a flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    text-align: center; /* Center-align the text */
     padding: 2rem;
-    background-color: rgb(255, 249, 208, 0.6);
+    background-color: rgba(255, 249, 208, 0.6);
+    margin: 10px;
+    height: auto;
+}
+
+.attraction h3 {
+    font-size: 40px;
     margin: 10px;
 }
-.attraction h3 {
-    font-size: large;
-    margin: 10px;
+
+.attraction p {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    font-size: 25px;
 }
 
 #attractions {
     display: flex;
     justify-content: space-around;
-    margin: 1rem;
+    margin: 5rem;
 }
 
 #attractions h3{
-    font-size: large;
+    font-size: 40px;
     margin: 15px;
 }
 
@@ -213,7 +253,6 @@ footer li {
 /* Grid area for attractions */
 #att1img {
     grid-area: attraction1img;
-    justify-self: end;
 }
 
 #att1desc {
@@ -230,34 +269,28 @@ footer li {
 
 #att3img {
     grid-area: attraction3img;
-    justify-self: end;
 }
 
 #att3desc {
     grid-area: attraction3des;
-    justify-self: center;
 }
 
 /* Styling individual items */
-.small-image {
-    align-items: center;
+.attraction-image {
+    max-width: 100%;  /* Ensure images are responsive */
+    max-height: auto; /* Adjust the max height to cut the size */
+    object-fit: cover; /* Ensure images cover the container */
+    overflow: hidden;
 }
-
-.small-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: auto;
-    margin-top: auto;
-}
-
 .header-image {
-    width: 100%;
+    max-width: 80%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icon {
-    width: 50px;
+    width: 80px;
     height: auto;
 }
 
@@ -280,21 +313,43 @@ footer li {
 }
 
 .description {
-    align-self: justify;
+    align-self: center;
     margin: 3rem;
-    font-size: medium;
-    background-color: #FEEFAD;
+    background-color: rgba(3, 174, 210, 0.1);
     padding: 30px;
     border-radius: 20px;
+    width: 90%;
+}
+
+.description p {
+    color: white;
+    font-size: 25px;
+    margin-top: 1rem 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .description h1 {
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 2rem;
 }
 
-.specs-div {
-    padding: 1rem;
+.description ul {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 2rem;
+    list-style-type: none;
+}
+
+.description li {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 2rem;
 }
 
 .testimonies {
@@ -321,6 +376,8 @@ footer li {
 
 .slider {
   grid-area: slider;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   height: 300px;
   position: relative;
   overflow: hidden;
@@ -340,6 +397,7 @@ footer li {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 .slider__nav {
   width: 12px;
   height: 12px;
@@ -356,6 +414,7 @@ footer li {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+
 .slider__nav:checked {
   -webkit-animation: check 0.4s linear forwards;
           animation: check 0.4s linear forwards;
@@ -412,19 +471,18 @@ footer li {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.slider__image {
-  font-size: 2.7rem;
-}
-.slider__caption {
-  font-weight: 500;
-  margin: -2rem 0 1rem;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-}
+
 .slider__txt {
-  color: #333;
+  color: white;
   margin-bottom: 1rem;
-  max-width: 300px;
+  max-width: auto;
+  font-style: italic;
+  font-size: 30px;
+}
+.person-name {
+    color: white;
+    margin-bottom: 10rem;
+    font-size: 20px;
 }
 
 @-webkit-keyframes check {
