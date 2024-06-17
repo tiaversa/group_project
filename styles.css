@@ -23,9 +23,9 @@ body{
         "header header header"
         "price1 price2 price3"
         "slider slider slider"
-        "attraction1des attraction1img attraction1img"
-        "attraction2img attraction2img attraction2des"
-        "attraction3des attraction3img attraction3img"
+        "attraction1 attraction1 attraction1"
+        "attraction2 attraction2 attraction2"
+        "attraction3 attraction3 attraction3"
         "footer footer footer";
 }
 
@@ -208,26 +208,69 @@ footer li {
 }
 
 .attraction {
-    display: flex; /* Make the container a flexbox */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
-    text-align: center; /* Center-align the text */
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
     padding: 2rem;
-    background-color: rgba(255, 249, 208, 0.6);
-    margin: 10px;
+    background-color: rgba(0, 20, 39, 0.4);
+    margin: 1rem 5rem;
     height: auto;
+    border-radius: 20px;
+    color: white;
 }
 
-.attraction h3 {
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.attraction h3, .reverse h3 {
     font-size: 40px;
-    margin: 10px;
+    margin-bottom: 3rem;
+    margin-left: 10rem;
 }
 
-.attraction p {
+.reverse h3 {
+    margin-left: 0;
+    margin-right: 10rem;
+}
+
+.attraction p, .reverse p {
     margin-top: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     font-size: 25px;
+    margin-left: 10rem;
+}
+
+.reverse p {
+    margin-left: 0;
+    margin-right: 10rem;
+}
+
+.attraction a, .reverse a {
+    font-size: 25px;
+    margin-left: 10rem;
+    border-radius: 10px;
+}
+
+.reverse a {
+    margin-left: 0;
+    margin-right: 10rem;
+}
+
+.attraction img, .reverse img {
+    width: 700px;  
+    height: auto; 
+    object-fit: cover; 
+    object-position: top; 
+    border-radius: 10px;
+    margin-left: 10rem; 
+}
+
+.reverse img {
+    margin-left: 0;
+    margin-right: 10rem; 
 }
 
 #attractions {
@@ -247,33 +290,21 @@ footer li {
     width: 49%;
     height: auto;
     background-color: rgb(202, 244, 255, 0.4);
-    text-align: center;
 }
 
 /* Grid area for attractions */
-#att1img {
-    grid-area: attraction1img;
+#attraction1 {
+    grid-area: attraction1;
 }
 
-#att1desc {
-    grid-area: attraction1des;
+#attraction2 {
+    grid-area: attraction2;
 }
 
-#att2img {
-    grid-area: attraction2img;
+#attraction3 {
+    grid-area: attraction3;
 }
 
-#att2desc {
-    grid-area: attraction2des;
-}
-
-#att3img {
-    grid-area: attraction3img;
-}
-
-#att3desc {
-    grid-area: attraction3des;
-}
 
 /* Styling individual items */
 .attraction-image {
