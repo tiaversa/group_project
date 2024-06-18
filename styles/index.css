@@ -1,5 +1,33 @@
 /* color palette: https://colorhunt.co/palette/03aed268d2e8fdde55feefad */
 
+.grid-container-index {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "price1 price2 price3"
+        "slider slider slider"
+        "attraction1 attraction1 attraction1"
+        "attraction2 attraction2 attraction2"
+        "attraction3 attraction3 attraction3"
+        "footer footer footer";
+}
+
+nav {grid-area: nav;}
+
+.header {
+    grid-area: header;
+}
+
+.slider{
+    grid-area: slider;
+}
+
+footer{
+    grid-area: footer;
+}
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){

@@ -1,25 +1,37 @@
 .grid-container-index {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
     grid-template-areas:
         "nav nav"
         "header header"
         "slider slider"
+        "separator separator"
         "attraction1 attraction2"
         "footer footer";
-    background-color: antiquewhite;
     justify-content: center;
-    }
+}
 
-nav {grid-area: nav;}
+nav {
+    grid-area: nav;
+}
 
 .header {
     grid-area: header;
 }
 
-.slider{
+.slider {
     grid-area: slider;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.separator {
+    grid-area: separator;
+    text-align: center; 
+    color: white; 
+    font-size: xxx-large;
 }
 
 .attractions {
@@ -27,16 +39,17 @@ nav {grid-area: nav;}
     border-radius: 20px;
     padding: 10px;
     height: auto;
-    background-color: rgb(202, 244, 255, 0.4);
+    background-color: rgba(202, 244, 255, 0.4); /* Corrected opacity syntax */
 }
 
-.attractions h3{
+.attractions h3 {
     font-size: xx-large;
     margin: 15px;
 }
 
 #attraction1 {
     grid-area: attraction1;
+    background-color: antiquewhite;
 }
 
 #attraction2 {
