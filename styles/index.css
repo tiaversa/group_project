@@ -190,13 +190,13 @@ nav a:link {
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){
-    nav a{
-        font-size: 5px;
+    nav a:link {
+        font-size: medium;
     }
 }
 /*Mobile-------------------------------------*/
 @media only screen and (max-width: 570px){
-    nav {
-        background-color: red;
+    nav a:link {
+        font-size: small;
     }
 }
