@@ -31,7 +31,7 @@ footer {
     grid-area: separator;
     text-align: center; 
     color: white; 
-    font-size: xxx-large;
+    font-size: 9vw;
 }
 
 .attractions {
@@ -49,7 +49,6 @@ footer {
 
 #attraction1 {
     grid-area: attraction1;
-    background-color: antiquewhite;
 }
 
 #attraction2 {
