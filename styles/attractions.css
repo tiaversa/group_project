@@ -7,11 +7,20 @@
         "header header"
         "slider slider"
         "attraction1 attraction2"
-        "footer footer footer";
+        "footer footer";
     background-color: antiquewhite;
+    justify-content: center;
     }
 
 nav {grid-area: nav;}
+
+.header {
+    grid-area: header;
+}
+
+.slider{
+    grid-area: slider;
+}
 
 .attractions {
     margin: 5rem;

@@ -197,6 +197,7 @@ footer li {
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 .slider {
+max-width: 900px;
 grid-area: slider;
 margin-top: 10rem;
 margin-bottom: 5rem;
