@@ -1,5 +1,7 @@
 /* color palette: https://colorhunt.co/palette/03aed268d2e8fdde55feefad */
 
+/*Common CSS-------------------------------------*/
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -8,82 +10,17 @@
     color: var(--darkBlue);
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body{
     overflow-x: hidden;
     background: linear-gradient(to bottom, #000e1d, #03AED2);
 }
 
-/* Explicitly set the grid */
-.grid-container-index {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "nav nav nav"
-        "header header header"
-        "price1 price2 price3"
-        "slider slider slider"
-        "attraction1 attraction1 attraction1"
-        "attraction2 attraction2 attraction2"
-        "attraction3 attraction3 attraction3"
-        "footer footer footer";
-}
 
-img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
-
-nav {
-    grid-area: nav;
-    flex-direction: row;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    left: 0;
-    width: 100%;
-    min-height: 80px;
-    max-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px;
-    background-color: rgba(3, 174, 210, 0.6); 
-}
-
-nav ul {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px;
-    list-style-type: none;
-    color: white;
-}
-
-nav li {
-    position: relative;
-    display:flex;
-    padding: 5px;
-    justify-content: space-around;
-    width: 45%;
-    list-style-type: none;
-}
-
-nav li:hover {
-    background-color: rgb(3, 174, 210);
-    color: #FEEFAD;
-    text-decoration: underline;
-}
-
-nav a:link {
-    color: #FDDE55;
-    text-decoration: none;
-    position: center;
-    font-size: 25px;
-}
+/*Header CSS---------------------------------------*/
 
 header {
     grid-area: header;
@@ -100,11 +37,1119 @@ header {
     align-items: center;
 }
 
+.header-image {
+    max-width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+/*Nav CSS-------------------------------------------*/
+
+nav { grid-area: nav; }
+/*Mobile-------------------------------------*/
+@media only screen and (max-width: 570px){
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        left: 0;
+        width: 100%;
+        min-height: auto;
+        max-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        background-color: rgba(3, 174, 210, 0.6); 
+    }
+    
+    nav ul {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        list-style-type: none;
+        color: white;
+    }
+    
+    nav li {
+        position: relative;
+        display:flex;
+        padding: 5px;
+        justify-content: space-around;
+        width: 45%;
+        list-style-type: none;
+    }
+    
+    nav li:hover {
+        background-color: rgb(3, 174, 210);
+        color: #FEEFAD;
+        text-decoration: underline;
+    }
+    
+    nav a:link {
+        color: #FDDE55;
+        text-decoration: none;
+        position: center;
+        font-size: large;
+    }    
+
+    .icon {
+        width: 40px;
+        height: auto;
+    }
+}
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        left: 0;
+        width: 100%;
+        min-height: auto;
+        max-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        background-color: rgba(3, 174, 210, 0.6); 
+    }
+    
+    nav ul {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        list-style-type: none;
+        color: white;
+    }
+    
+    nav li {
+        position: relative;
+        display:flex;
+        padding: 5px;
+        justify-content: space-around;
+        width: 45%;
+        list-style-type: none;
+    }
+    
+    nav li:hover {
+        background-color: rgb(3, 174, 210);
+        color: #FEEFAD;
+        text-decoration: underline;
+    }
+    
+    nav a:link {
+        color: #FDDE55;
+        text-decoration: none;
+        position: center;
+        font-size: large;
+    }
+
+    .icon {
+        width: 70px;
+        height: auto;
+    }
+}
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1011px){
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        left: 0;
+        width: 100%;
+        min-height: auto;
+        max-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        background-color: rgba(3, 174, 210, 0.6); 
+    }
+    
+    nav ul {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        list-style-type: none;
+        color: white;
+    }
+    
+    nav li {
+        position: relative;
+        display:flex;
+        padding: 5px;
+        justify-content: space-around;
+        width: 45%;
+        list-style-type: none;
+    }
+    
+    nav li:hover {
+        background-color: rgb(3, 174, 210);
+        color: #FEEFAD;
+        text-decoration: underline;
+    }
+    
+    nav a:link {
+        color: #FDDE55;
+        text-decoration: none;
+        position: center;
+        font-size: large;
+    }
+
+    .icon {
+        width: 80px;
+        height: auto;
+    }
+}
+
+/*Index.html CSS------------------------------------*/
+
+/*Mobile-------------------------------------*/
+@media only screen and (max-width: 570px){
+    /* Explicitly set the grid */
+    .grid-container-index {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "price1 price2 price3"
+        "slider slider slider"
+        "attraction1 attraction1 attraction1"
+        "attraction2 attraction2 attraction2"
+        "attraction3 attraction3 attraction3"
+        "footer footer footer";
+    }
+
+    .description {
+        align-self: center;
+        margin: 3rem;
+        background-color: rgba(3, 174, 210, 0.1);
+        padding: 30px;
+        border-radius: 20px;
+        width: 90%;
+    }
+    
+    .description p {
+        color: white;
+        font-size: 25px;
+        margin-top: 1rem 5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 2rem;
+    }
+
+    /* Grid area for price items */
+    #price1 {
+        grid-area: price1;
+        margin-left: 10rem;
+    }
+
+    #price2 {
+        grid-area: price2;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+    #price3 {
+        grid-area: price3;
+        margin-right: 10rem;
+    }
+
+    .price-item {
+        padding: 10px;
+        background-color: #FFFFFF;
+        margin: 5px;
+        align-items: center;
+        text-align: center;
+        border-style: dotted;
+    }
+
+    .price-item h3 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .price-amount p {
+        font-style: italic;
+        font-size: 15px;
+        margin-bottom: 0.3rem;
+    }
+
+    .price-amount h4 {
+        font-size: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .price-image h4 {
+        font-size: 10px;
+        margin-top: 2rem;
+    }
+
+    .price-list {
+        padding: 10px;
+        font-size: 20px;
+        list-style-type: none;
+    }
+
+    .price-button {
+        margin: 10px;
+        background-color: darkblue;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 10px;
+        text-decoration: none;
+    }
+
+    .price-button:hover{
+        background-color: #FDDE55;
+        color: black;
+    }
+
+    .price-button a {
+        text-decoration: none;
+    }
+
+    .price-button a:hover {
+        text-decoration: underline;
+        color: #03AED2;
+    }
+
+    /* Slider code from https://codepen.io/maheshambure21/pen/qZZrxy */
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+    .slider {
+    grid-area: slider;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+
+    .slider__nav {
+    width: 6px;
+    height: 6px;
+    margin: 2rem 12px;
+    border-radius: 50%;
+    z-index: 10;
+    outline: 6px solid #FDDE55;
+    outline-offset: -6px;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    cursor: pointer;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    }
+
+    .slider__nav:checked {
+    -webkit-animation: check 0.4s linear forwards;
+            animation: check 0.4s linear forwards;
+    }
+    .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+    left: 0%;
+    }
+    .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+    left: -100%;
+    }
+    .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+    left: -200%;
+    }
+    .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+    left: -300%;
+    }
+    .slider__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    -webkit-transition: left 0.4s;
+    transition: left 0.4s;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    }
+    .slider__contents {
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+
+    .slider__txt {
+    color: white;
+    margin-bottom: 1rem;
+    max-width: auto;
+    font-style: italic;
+    font-size: 15px;
+    }
+    .person-name {
+        color: white;
+        margin-bottom: 10rem;
+        font-size: 10px;
+    }
+
+    .attraction {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        padding: 2rem;
+        background-color: rgba(0, 20, 39, 0.4);
+        margin: 1rem 5rem;
+        height: auto;
+        border-radius: 20px;
+        color: white;
+    }
+    
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .attraction h3, .reverse h3 {
+        font-size: 20px;
+        margin-bottom: 3rem;
+        margin-left: 10rem;
+    }
+    
+    .reverse h3 {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction p, .reverse p {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 12.5px;
+        margin-left: 10rem;
+    }
+    
+    .reverse p {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction a, .reverse a {
+        font-size: 12.5px;
+        margin-left: 10rem;
+        border-radius: 10px;
+    }
+    
+    .reverse a {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction img, .reverse img {
+        width: 700px;  
+        height: auto; 
+        object-fit: cover; 
+        object-position: top; 
+        border-radius: 10px;
+        margin-left: 10rem; 
+    }
+    
+    .reverse img {
+        margin-left: 0;
+        margin-right: 10rem; 
+    }
+}
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+    /* Explicitly set the grid */
+    .grid-container-index {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "price1 price2 price3"
+        "slider slider slider"
+        "attraction1 attraction1 attraction1"
+        "attraction2 attraction2 attraction2"
+        "attraction3 attraction3 attraction3"
+        "footer footer footer";
+    }
+
+    .description {
+        align-self: center;
+        margin: 3rem;
+        background-color: rgba(3, 174, 210, 0.1);
+        padding: 30px;
+        border-radius: 20px;
+        width: 90%;
+    }
+    
+    .description p {
+        color: white;
+        font-size: 17.5px;
+        margin-top: 1rem 5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: white;
+        font-size: 30px;
+        margin-bottom: 2rem;
+    }
+
+    /* Grid area for price items */
+    #price1 {
+        grid-area: price1;
+        margin-left: 10rem;
+    }
+
+    #price2 {
+        grid-area: price2;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+    #price3 {
+        grid-area: price3;
+        margin-right: 10rem;
+    }
+
+    .price-item {
+        padding: 10px;
+        background-color: #FFFFFF;
+        margin: 5px;
+        align-items: center;
+        text-align: center;
+        border-style: dotted;
+    }
+
+    .price-item h3 {
+        font-size: 30px;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .price-amount p {
+        font-style: italic;
+        font-size: 22.5px;
+        margin-bottom: 0.3rem;
+    }
+
+    .price-amount h4 {
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .price-image h4 {
+        font-size: 15px;
+        margin-top: 2rem;
+    }
+
+    .price-list {
+        padding: 10px;
+        font-size: 15px;
+        list-style-type: none;
+    }
+
+    .price-button {
+        margin: 10px;
+        background-color: darkblue;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    .price-button:hover{
+        background-color: #FDDE55;
+        color: black;
+    }
+
+    .price-button a {
+        text-decoration: none;
+    }
+
+    .price-button a:hover {
+        text-decoration: underline;
+        color: #03AED2;
+    }
+
+    /* Slider code from https://codepen.io/maheshambure21/pen/qZZrxy */
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+    .slider {
+    grid-area: slider;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+
+    .slider__nav {
+    width: 9px;
+    height: 9px;
+    margin: 2rem 12px;
+    border-radius: 50%;
+    z-index: 10;
+    outline: 6px solid #FDDE55;
+    outline-offset: -6px;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    cursor: pointer;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    }
+
+    .slider__nav:checked {
+    -webkit-animation: check 0.4s linear forwards;
+            animation: check 0.4s linear forwards;
+    }
+    .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+    left: 0%;
+    }
+    .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+    left: -100%;
+    }
+    .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+    left: -200%;
+    }
+    .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+    left: -300%;
+    }
+    .slider__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    -webkit-transition: left 0.4s;
+    transition: left 0.4s;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    }
+    .slider__contents {
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+
+    .slider__txt {
+    color: white;
+    margin-bottom: 1rem;
+    max-width: auto;
+    font-style: italic;
+    font-size: 22.5px;
+    }
+    .person-name {
+        color: white;
+        margin-bottom: 10rem;
+        font-size: 15px;
+    }
+
+    .attraction {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        padding: 2rem;
+        background-color: rgba(0, 20, 39, 0.4);
+        margin: 1rem 5rem;
+        height: auto;
+        border-radius: 20px;
+        color: white;
+    }
+    
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .attraction h3, .reverse h3 {
+        font-size: 30px;
+        margin-bottom: 3rem;
+        margin-left: 10rem;
+    }
+    
+    .reverse h3 {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction p, .reverse p {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 17.5px;
+        margin-left: 10rem;
+    }
+    
+    .reverse p {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction a, .reverse a {
+        font-size: 17.5px;
+        margin-left: 10rem;
+        border-radius: 10px;
+    }
+    
+    .reverse a {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction img, .reverse img {
+        width: 700px;  
+        height: auto; 
+        object-fit: cover; 
+        object-position: top; 
+        border-radius: 10px;
+        margin-left: 10rem; 
+    }
+    
+    .reverse img {
+        margin-left: 0;
+        margin-right: 10rem; 
+    }
+}
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1011px){
+    /* Explicitly set the grid */
+    .grid-container-index {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "price1 price2 price3"
+        "slider slider slider"
+        "attraction1 attraction1 attraction1"
+        "attraction2 attraction2 attraction2"
+        "attraction3 attraction3 attraction3"
+        "footer footer footer";
+    }
+
+    .description {
+        align-self: center;
+        margin: 3rem;
+        background-color: rgba(3, 174, 210, 0.1);
+        padding: 30px;
+        border-radius: 20px;
+        width: 90%;
+    }
+    
+    .description p {
+        color: white;
+        font-size: 25px;
+        margin-top: 1rem 5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: white;
+        font-size: 40px;
+        margin-bottom: 2rem;
+    }
+
+    /* Grid area for price items */
+    #price1 {
+        grid-area: price1;
+        margin-left: 10rem;
+    }
+
+    #price2 {
+        grid-area: price2;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+    #price3 {
+        grid-area: price3;
+        margin-right: 10rem;
+    }
+
+    .price-item {
+        padding: 10px;
+        background-color: #FFFFFF;
+        margin: 5px;
+        align-items: center;
+        text-align: center;
+        border-style: dotted;
+    }
+
+    .price-item h3 {
+        font-size: 40px;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .price-amount p {
+        font-style: italic;
+        font-size: 30px;
+        margin-bottom: 0.3rem;
+    }
+
+    .price-amount h4 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .price-image h4 {
+        font-size: 20px;
+        margin-top: 2rem;
+    }
+
+    .price-list {
+        padding: 10px;
+        font-size: 20px;
+        list-style-type: none;
+    }
+
+    .price-button {
+        margin: 10px;
+        background-color: darkblue;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .price-button:hover{
+        background-color: #FDDE55;
+        color: black;
+    }
+
+    .price-button a {
+        text-decoration: none;
+    }
+
+    .price-button a:hover {
+        text-decoration: underline;
+        color: #03AED2;
+    }
+
+    /* Slider code from https://codepen.io/maheshambure21/pen/qZZrxy */
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+    .slider {
+    grid-area: slider;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+
+    .slider__nav {
+    width: 12px;
+    height: 12px;
+    margin: 2rem 12px;
+    border-radius: 50%;
+    z-index: 10;
+    outline: 6px solid #FDDE55;
+    outline-offset: -6px;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    cursor: pointer;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    }
+
+    .slider__nav:checked {
+    -webkit-animation: check 0.4s linear forwards;
+            animation: check 0.4s linear forwards;
+    }
+    .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+    left: 0%;
+    }
+    .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+    left: -100%;
+    }
+    .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+    left: -200%;
+    }
+    .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+    left: -300%;
+    }
+    .slider__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    -webkit-transition: left 0.4s;
+    transition: left 0.4s;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    }
+    .slider__contents {
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+
+    .slider__txt {
+    color: white;
+    margin-bottom: 1rem;
+    max-width: auto;
+    font-style: italic;
+    font-size: 30px;
+    }
+    .person-name {
+        color: white;
+        margin-bottom: 10rem;
+        font-size: 20px;
+    }
+
+    .attraction {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        padding: 2rem;
+        background-color: rgba(0, 20, 39, 0.4);
+        margin: 1rem 5rem;
+        height: auto;
+        border-radius: 20px;
+        color: white;
+    }
+    
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .attraction h3, .reverse h3 {
+        font-size: 40px;
+        margin-bottom: 3rem;
+        margin-left: 10rem;
+    }
+    
+    .reverse h3 {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction p, .reverse p {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 25px;
+        margin-left: 10rem;
+    }
+    
+    .reverse p {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction a, .reverse a {
+        font-size: 25px;
+        margin-left: 10rem;
+        border-radius: 10px;
+    }
+    
+    .reverse a {
+        margin-left: 0;
+        margin-right: 10rem;
+    }
+    
+    .attraction img, .reverse img {
+        width: 700px;  
+        height: auto; 
+        object-fit: cover; 
+        object-position: top; 
+        border-radius: 10px;
+        margin-left: 10rem; 
+    }
+    
+    .reverse img {
+        margin-left: 0;
+        margin-right: 10rem; 
+    }
+}
 footer {
     grid-area: footer;
-    max-height: 200px;
-    height: auto;
     background-color: #000e1d;
     border-radius: 10px 10px 0px 0px;
     color: white;
@@ -131,150 +1176,9 @@ footer li {
     font-size: 20px;
 }
 
-/* Grid area for price items */
-#price1 {
-    grid-area: price1;
-    margin-left: 10rem;
-}
 
-#price2 {
-    grid-area: price2;
-    margin-right: 5rem;
-    margin-left: 5rem;
-}
 
-#price3 {
-    grid-area: price3;
-    margin-right: 10rem;
-}
 
-.price-item {
-    padding: 10px;
-    background-color: #FFFFFF;
-    margin: 5px;
-    align-items: center;
-    text-align: center;
-    border-style: dotted;
-}
-
-.price-item h3 {
-    font-size: 40px;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-}
-
-.price-amount p {
-    font-style: italic;
-    font-size: 30px;
-    margin-bottom: 0.3rem;
-}
-
-.price-amount h4 {
-    font-size: 20px;
-    margin-bottom: 1rem;
-}
-
-.price-image h4 {
-    font-size: 20px;
-    margin-top: 2rem;
-}
-
-.price-list {
-    padding: 10px;
-    font-size: 20px;
-    list-style-type: none;
-}
-
-.price-button {
-    margin: 10px;
-    background-color: darkblue;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.price-button:hover{
-    background-color: #FDDE55;
-    color: black;
-}
-
-.price-button a {
-    text-decoration: none;
-}
-
-.price-button a:hover {
-    text-decoration: underline;
-    color: #03AED2;
-}
-
-.attraction {
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    padding: 2rem;
-    background-color: rgba(0, 20, 39, 0.4);
-    margin: 1rem 5rem;
-    height: auto;
-    border-radius: 20px;
-    color: white;
-}
-
-.reverse {
-    flex-direction: row-reverse;
-}
-
-.attraction h3, .reverse h3 {
-    font-size: 40px;
-    margin-bottom: 3rem;
-    margin-left: 10rem;
-}
-
-.reverse h3 {
-    margin-left: 0;
-    margin-right: 10rem;
-}
-
-.attraction p, .reverse p {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    font-size: 25px;
-    margin-left: 10rem;
-}
-
-.reverse p {
-    margin-left: 0;
-    margin-right: 10rem;
-}
-
-.attraction a, .reverse a {
-    font-size: 25px;
-    margin-left: 10rem;
-    border-radius: 10px;
-}
-
-.reverse a {
-    margin-left: 0;
-    margin-right: 10rem;
-}
-
-.attraction img, .reverse img {
-    width: 700px;  
-    height: auto; 
-    object-fit: cover; 
-    object-position: top; 
-    border-radius: 10px;
-    margin-left: 10rem; 
-}
-
-.reverse img {
-    margin-left: 0;
-    margin-right: 10rem; 
-}
 
 #attractions {
     display: flex;
@@ -316,17 +1220,6 @@ footer li {
     object-fit: cover; /* Ensure images cover the container */
     overflow: hidden;
 }
-.header-image {
-    max-width: 80%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.icon {
-    width: 80px;
-    height: auto;
-}
 
 .button {
     display: inline-block;
@@ -346,30 +1239,6 @@ footer li {
     background-color: #005bb5;
 }
 
-.description {
-    align-self: center;
-    margin: 3rem;
-    background-color: rgba(3, 174, 210, 0.1);
-    padding: 30px;
-    border-radius: 20px;
-    width: 90%;
-}
-
-.description p {
-    color: white;
-    font-size: 25px;
-    margin-top: 1rem 5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.description h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: white;
-    font-size: 40px;
-    margin-bottom: 2rem;
-}
 
 .description ul {
     text-align: center;
@@ -386,138 +1255,10 @@ footer li {
     margin-top: 2rem;
 }
 
-.testimonies {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    background-color: #FEEFAD;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.testimonies .name{
-    text-align: right;
-}
 
 
-/* Slider code from https://codepen.io/maheshambure21/pen/qZZrxy */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
-*, *:before, *:after {
-  box-sizing: border-box;
-}
 
-.slider {
-  grid-area: slider;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.slider__nav {
-  width: 12px;
-  height: 12px;
-  margin: 2rem 12px;
-  border-radius: 50%;
-  z-index: 10;
-  outline: 6px solid #FDDE55;
-  outline-offset: -6px;
-  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-  cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.slider__nav:checked {
-  -webkit-animation: check 0.4s linear forwards;
-          animation: check 0.4s linear forwards;
-}
-.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
-  left: 0%;
-}
-.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
-  left: -100%;
-}
-.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
-  left: -200%;
-}
-.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
-  left: -300%;
-}
-.slider__inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 400%;
-  height: 100%;
-  -webkit-transition: left 0.4s;
-  transition: left 0.4s;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-}
-.slider__contents {
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.slider__txt {
-  color: white;
-  margin-bottom: 1rem;
-  max-width: auto;
-  font-style: italic;
-  font-size: 30px;
-}
-.person-name {
-    color: white;
-    margin-bottom: 10rem;
-    font-size: 20px;
-}
 
 @-webkit-keyframes check {
   50% {
