@@ -1,143 +1,70 @@
 /* color palette: https://colorhunt.co/palette/03aed268d2e8fdde55feefad */
-
 .grid-container-index {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
         "nav nav nav"
         "header header header"
         "price1 price2 price3"
         "slider slider slider"
-        "attraction1 attraction1 attraction1"
-        "attraction2 attraction2 attraction2"
-        "attraction3 attraction3 attraction3"
+        "attraction1des attraction1img attraction1img"
+        "attraction2img attraction2img attraction2des"
+        "attraction3des attraction3img attraction3img"
         "footer footer footer";
+    justify-content: space-evenly;
 }
 
-nav {grid-area: nav;}
-
-.header {
-    grid-area: header;
+#testimonies {
+    grid-area: testimonies;
+    background-color: #0073e6;
 }
 
-.slider{
-    grid-area: slider;
+/* Grid area for price items */
+#price1 {
+    grid-area: price1;
 }
 
-footer{
-    grid-area: footer;
+#price2 {
+    grid-area: price2;
 }
 
-/*Nav-------------------------------------*/
-
-nav {
-    flex-direction: row;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    left: 0;
-    width: 100%;
-    min-height: auto;
-    max-height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px;
-    background-color: rgba(3, 174, 210, 0.6); 
+#price3 {
+    grid-area: price3;
 }
-
-nav ul {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px;
-    list-style-type: none;
-    color: white;
-}
-
-nav li {
-    position: relative;
-    display:flex;
-    padding: 5px;
-    justify-content: space-around;
-    width: 45%;
-    list-style-type: none;
-}
-
-nav li:hover {
-    background-color: rgb(3, 174, 210);
-    color: #FEEFAD;
-    text-decoration: underline;
-}
-
-nav a:link {
-    color: #FDDE55;
-    text-decoration: none;
-    position: center;
-    font-size: large;
-}
-
-.icon {
-    width: 80px;
-    height: auto;
-}
-
-/*Prices-------------------------------------*/
 
 .price-item {
     padding: 10px;
-    background-color: #FFFFFF;
+    background-color: #68D2E8;
     margin: 5px;
     align-items: center;
     text-align: center;
-    border-style: dotted;
 }
 
 .price-item h3 {
-    font-size: 20px;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
+    font-size: large;
 }
 
-.price-amount p {
+.price-amount {
     font-style: italic;
-    font-size: 15px;
-    margin-bottom: 0.3rem;
-}
-
-.price-amount h4 {
-    font-size: 10px;
-    margin-bottom: 1rem;
-}
-
-.price-image h4 {
-    font-size: 10px;
-    margin-top: 2rem;
 }
 
 .price-list {
     padding: 10px;
-    font-size: 20px;
-    list-style-type: none;
+    font-size: normal;
 }
 
 .price-button {
     margin: 10px;
-    background-color: darkblue;
-    color: white;
+    background-color: #FEEFAD;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    font-size: 10px;
-    text-decoration: none;
+    font-size: medium;
 }
 
 .price-button:hover{
     background-color: #FDDE55;
-    color: black;
 }
 
 .price-button a {
@@ -149,44 +76,138 @@ nav a:link {
     color: #03AED2;
 }
 
-#price1 {
-    grid-area: price1;
-    margin-left: 4%;
+
+.attraction {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(255, 249, 208, 0.6);
+    margin: 10px;
+}
+.attraction h3 {
+    font-size: large;
+    margin: 10px;
 }
 
-#price2 {
-    grid-area: price2;
-    margin-right: 2%;
-    margin-left: 2%;
+#attractions {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
 }
 
-#price3 {
-    grid-area: price3;
-    margin-right: 4%;
+#attractions h3{
+    font-size: large;
+    margin: 15px;
 }
 
-/*Attractions-------------------------------------*/
+#attractions div {
+    border-radius: 20px;
+    padding: 10px;
+    width: 49%;
+    height: auto;
+    background-color: rgb(202, 244, 255, 0.4);
+    text-align: center;
+}
+
 /* Grid area for attractions */
-#attraction1 {
-    grid-area: attraction1;
+#att1img {
+    grid-area: attraction1img;
+    justify-self: end;
 }
 
-#attraction2 {
-    grid-area: attraction2;
+#att1desc {
+    grid-area: attraction1des;
 }
 
-#attraction3 {
-    grid-area: attraction3;
+#att2img {
+    grid-area: attraction2img;
 }
 
+#att2desc {
+    grid-area: attraction2des;
+}
+
+#att3img {
+    grid-area: attraction3img;
+    justify-self: end;
+}
+
+#att3desc {
+    grid-area: attraction3des;
+    justify-self: center;
+}
 
 /* Styling individual items */
-.attraction-image {
-    max-width: 100%;  /* Ensure images are responsive */
-    max-height: auto; /* Adjust the max height to cut the size */
-    object-fit: cover; /* Ensure images cover the container */
-    overflow: hidden;
+.small-image {
+    align-items: center;
 }
+
+.small-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+.description {
+    align-self: justify;
+    margin: 3rem;
+    font-size: medium;
+    background-color: #FEEFAD;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.description h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.specs-div {
+    padding: 1rem;
+}
+
+.testimonies {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: #FEEFAD;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonies .name{
+    text-align: right;
+}
+
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){
