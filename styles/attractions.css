@@ -35,9 +35,9 @@ footer {
 }
 
 .attractions {
-    margin: 5rem;
-    border-radius: 20px;
-    padding: 10px;
+    margin: 2%;
+    border-radius: 10%;
+    padding: 10%;
     height: auto;
     background-color: rgba(202, 244, 255, 0.4); /* Corrected opacity syntax */
 }
