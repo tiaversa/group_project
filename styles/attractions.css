@@ -39,7 +39,7 @@ footer {
     border-radius: 10%;
     padding: 10%;
     height: auto;
-    background-color: rgba(202, 244, 255, 0.4); /* Corrected opacity syntax */
+    background-color: rgba(202, 244, 255, 0.4);
 }
 
 .attractions h3 {
@@ -53,4 +53,19 @@ footer {
 
 #attraction2 {
     grid-area: attraction2;
+}
+
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+    .attractions h3 {
+        font-size: x-large;
+        margin: 15px;
+    }
+}
+/*Mobile-------------------------------------*/
+@media only screen and (max-width: 570px){
+    .attractions h3 {
+        font-size: large;
+        margin: 15px;
+    }
 }
