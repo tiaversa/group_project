@@ -1,0 +1,219 @@
+/* color palette: https://colorhunt.co/palette/03aed268d2e8fdde55feefad */
+.grid-container-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "price1 price2 price3"
+        "slider slider slider"
+        "attraction1des attraction1img attraction1img"
+        "attraction2img attraction2img attraction2des"
+        "attraction3des attraction3img attraction3img"
+        "footer footer footer";
+    justify-content: space-evenly;
+}
+
+#testimonies {
+    grid-area: testimonies;
+    background-color: #0073e6;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* Grid area for price items */
+#price1 {
+    grid-area: price1;
+}
+
+#price2 {
+    grid-area: price2;
+}
+
+#price3 {
+    grid-area: price3;
+}
+
+.price-item {
+    padding: 10px;
+    background-color: #68D2E8;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.price-item h3 {
+    font-size: large;
+}
+
+.price-amount {
+    font-style: italic;
+}
+
+.price-list {
+    padding: 10px;
+    font-size: normal;
+}
+
+.price-button {
+    margin: 10px;
+    background-color: #FEEFAD;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+.price-button:hover{
+    background-color: #FDDE55;
+}
+
+.price-button a {
+    text-decoration: none;
+}
+
+.price-button a:hover {
+    text-decoration: underline;
+    color: #03AED2;
+}
+
+
+.attraction {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(255, 249, 208, 0.6);
+    margin: 10px;
+}
+.attraction h3 {
+    font-size: large;
+    margin: 10px;
+}
+
+#attractions {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+#attractions h3{
+    font-size: large;
+    margin: 15px;
+}
+
+#attractions div {
+    border-radius: 20px;
+    padding: 10px;
+    width: 49%;
+    height: auto;
+    background-color: rgb(202, 244, 255, 0.4);
+    text-align: center;
+}
+
+/* Grid area for attractions */
+#att1img {
+    grid-area: attraction1img;
+    justify-self: end;
+}
+
+#att1desc {
+    grid-area: attraction1des;
+}
+
+#att2img {
+    grid-area: attraction2img;
+}
+
+#att2desc {
+    grid-area: attraction2des;
+}
+
+#att3img {
+    grid-area: attraction3img;
+    justify-self: end;
+}
+
+#att3desc {
+    grid-area: attraction3des;
+    justify-self: center;
+}
+
+/* Styling individual items */
+.small-image {
+    align-items: center;
+}
+
+.small-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+.description {
+    align-self: justify;
+    margin: 3rem;
+    font-size: medium;
+    background-color: #FEEFAD;
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--darkBlue);
+}
+
+.description p{
+    color: var(--darkBlue);
+}
+
+.description h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--darkBlue);
+}
+
+.specs-div {
+    padding: 1rem;
+}
+
+.slider {
+    grid-area: slider;
+}
+

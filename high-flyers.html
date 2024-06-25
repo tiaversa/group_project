@@ -5,75 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Flyer's Hat</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/across-pages.css">
+    <link rel="stylesheet" href="./styles/attractions.css">
 </head>
 <body>
-    <nav class="nav">
-        <img src="img/park-image.jpg" alt="Logo" class="icon" href="index.html">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#price1">Tickets</a></li>
-            <li><a href="index.html#slider">Testimonies</a></li>
-            <li><a href="index.html#att1desc">Attractions</a></li>
-            <li><a href="index.html#footer">Contact</a></li>
-        </ul>
-        <div id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></div>
-    </nav>
+    <div class="grid-container-index">
+        <nav>
+            <img src="img/park-image.jpg" alt="Logo" class="icon" href="index.html">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#price1">Tickets</a></li>
+                <li><a href="index.html#slider">Testimonies</a></li>
+                <li><a href="index.html#att1desc">Attractions</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+            <div id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
 
-    <div class="header">
-        <img src="img/high-flyer.jpg" alt="Park Image" class="mid-image">
-    </div>
+        <div class="header">
+            <div class="header-content">
+                <img src="img/high-flyer.jpg" alt="Park Image" class="header-image">
+                <section class="description">
+                    <h1>High Flyer's Hat</h1>
+                    <p>Spin high in the sky with this thrilling ride offering stunning views and an exhilarating experience.</p>
+                    <ul>
+                        <li>Requirements:</li>
+                        <li><b>Minimum Height:</b> 120 cm</li>
+                        <li><b>Minimum age:</b> 12 years old</li>
+                        <li><b>Hours:</b> From 8am to 10pm</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
 
-    <section class="description">
-        <h1>High Flyer's Hat</h1>
-        <p>Spin high in the sky with this thrilling ride offering stunning views and an exhilarating experience.</p>
-    </section>
+        <div class="slider" id="slider">
+            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+            <div class="slider__inner">
+                <div class="slider__contents">
+                    <p class="slider__txt">"I recently visited Team Park with my family, and we had an amazing time! The park is beautifully maintained, and the attractions are top-notch. My kids loved the Jungle Expedition, and we all enjoyed the Twister Coaster. The staff was friendly and helpful, making our experience even better. We'll definitely be back!"</p>
+                    <p class="person-name">Emily Johnson, Google Reviews</p>
+                </div>
+                <div class="slider__contents">
+                    <p class="slider__txt">Team Park exceeded all my expectations! The rides are thrilling and there's something for everyone. The High Flyer's Hat was a standout, offering breathtaking views and a fun ride experience. The food options were varied and delicious, and the park was clean and well-organized. A perfect day out for thrill-seekers and families alike.</p>
+                    <p class="person-name">Michael Brown, Google Reviews</p>
+                </div>
+                <div class="slider__contents">
+                    <p class="slider__txt">I had a great time at Team Park. The attractions are fantastic, especially the Twister Coaster and Jungle Expedition. The only downside was the long wait times for some of the popular rides. However, the park's ambiance and the friendly staff made up for it. I recommend arriving early to make the most of your visit.</p>
+                    <p class="person-name">Sarah Williams, Google Reviews</p>
+                </div>
+                <div class="slider__contents">
+                    <p class="slider__txt">Team Park is the best theme park I've ever visited! The rides are incredible, and there's a great mix of thrill rides and family-friendly attractions. The High Flyer's Hat was my personal favorite. The park is clean, and the staff is very attentive. I can't wait to visit again!</p>
+                    <p class="person-name">David Smith, Google Reviews</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="specs-div">
-        <ul>
-            <li><b>Minimum Height: 120 cm</b></li>
-            <li><b>Minimum age: 12 years old</b></li>
-            <li><b>Hours: From 8am to 10pm</b></li>
-        </ul>
-    </div>
-
-    <div class="testimonies">
-        <p><i>"I can't get enough of the High Flyer's Hat!
-            The views from the top are absolutely breathtaking, and the
-            thrill of spinning around high in the sky is unmatched.
-            Every time I visit, it's the first ride I go to, and it never disappoints.
-            It's perfect for both adrenaline junkies and those who just
-            want to enjoy a unique aerial experience.
-            Highly recommend it to everyone!"</i></p>
-        <p class="name"><b>Alexandra, Google Reviews</b></p>
-    </div>
-    <h1 style="text-align: center;">Check out our other attractions!</h1>
-    <div id="attractions">
-        <div>
+        <h1 id="separator">Check out our other attractions!</h1>
+        <div id="attraction1" class="attractions">
             <h3>Jungle Expedition</h3>
             <img src="img/jungle-expedition.jpg" alt="Jungle Expedition" class="small-image">
             <a href="jungle-expedition.html" class="button">Explore Now</a>
         </div>
-        <div>
+        <div id="attraction2" class="attractions">
             <h3>Twister Coaster</h3>
-            <img src="img/twister-coaster.jpg" alt="Twister Coaster" class = "small-image">
+            <img src="img/twister-coaster.jpg" alt="Twister Coaster" class="small-image">
             <a href="#" class="button">Explore now</a>
         </div>
-    </div>
 
-    <footer id="footer">
-        <ul id="contact">
-            <li><a href="https://mail.google.com/mail/u/0/">Contact</a></li>
-            <li><a href="index.html">About Us</a></li>
-            <li><a href="index.html">Terms & Conditions</a></li>
-            <li><a href="index.html">Careers</a></li>
-            <li><a href="index.html">FAQ</a></li>
-        </ul>
-        <ul id="social-media">
-            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
-        </ul>
-    </footer>
+        <footer id="footer">
+            <ul id="contact">
+                <li><a href="https://mail.google.com/mail/u/0/">Contact</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="index.html">Terms & Conditions</a></li>
+                <li><a href="index.html">Careers</a></li>
+                <li><a href="index.html">FAQ</a></li>
+            </ul>
+            <ul id="social-media">
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>
