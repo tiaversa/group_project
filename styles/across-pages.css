@@ -202,8 +202,8 @@ footer a:hover {
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 .slider {
-margin-top: 10rem;
-margin-bottom: 5rem;
+margin-top: 5%;
+margin-bottom: 5%;
 height: 300px;
 position: relative;
 overflow: hidden;
@@ -227,7 +227,7 @@ display: flex;
 .slider__nav {
 width: 12px;
 height: 12px;
-margin: 2rem 12px;
+margin: 1%;
 border-radius: 50%;
 z-index: 10;
 outline: 6px solid #FDDE55;
@@ -298,17 +298,25 @@ display: flex;
         justify-content: center;
 }
 
+/* .slider__caption {
+    color: white;
+    margin-top: 10%;
+} */
+
 .slider__txt {
 color: white;
 margin-top: 10%;
 max-width: auto;
 font-style: italic;
-font-size: large;
+font-size: 2vw;
+margin-top: 5%;
 }
 .person-name {
     color: white;
-    margin-bottom: 16%;
-    font-size: medium;
+    margin-bottom: 10%;
+    font-size: 1.5vw;
+    margin-top: 2rem;
+    margin-bottom: 10%;
 }
 
 

@@ -29,9 +29,13 @@ footer {
 
 .separator {
     grid-area: separator;
-    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white; 
     font-size: 9vw;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .attractions {
