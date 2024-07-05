@@ -298,23 +298,19 @@ display: flex;
         justify-content: center;
 }
 
-/* .slider__caption {
-    color: white;
-    margin-top: 10%;
-} */
-
 .slider__txt {
 color: white;
 margin-top: 10%;
 max-width: auto;
 font-style: italic;
-font-size: 2vw;
+font-size: x-large;
 margin-top: 5%;
 }
+
 .person-name {
     color: white;
     margin-bottom: 10%;
-    font-size: 1.5vw;
+    font-size: large;
     margin-top: 2rem;
     margin-bottom: 10%;
 }
@@ -350,6 +346,22 @@ margin-top: 5%;
     footer li {
         font-size: medium;
     }
+    .slider__txt {
+        color: white;
+        margin-top: 10%;
+        max-width: auto;
+        font-style: italic;
+        font-size: large;
+        margin-top: 5%;
+    }
+        
+    .person-name {
+        color: white;
+        margin-bottom: 10%;
+        font-size: medium;
+        margin-top: 2rem;
+        margin-bottom: 10%;
+    }
 }
 /*Mobile-------------------------------------*/
 @media only screen and (max-width: 570px){
@@ -358,5 +370,21 @@ margin-top: 5%;
     }
     footer li {
         font-size: small;
+    }
+    .slider__txt {
+        color: white;
+        margin-top: 10%;
+        max-width: auto;
+        font-style: italic;
+        font-size: medium;
+        margin-top: 5%;
+    }
+    
+    .person-name {
+        color: white;
+        margin-bottom: 10%;
+        font-size: small;
+        margin-top: 2rem;
+        margin-bottom: 10%;
     }
 }

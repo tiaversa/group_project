@@ -1,75 +1,214 @@
-.grid-container-index {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "nav nav"
-        "header header"
-        "slider slider"
-        "separator separator"
-        "attraction1 attraction2"
-        "footer footer";
-    justify-content: center;
+@media only screen and (min-width: 1011px){
+    .grid-container-index {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nav nav"
+            "header header"
+            "slider slider"
+            "separator separator"
+            "attraction1 attraction2"
+            "footer footer";
+        justify-content: center;
+    }
+    
+    nav {
+        grid-area: nav;
+    }
+    
+    .header {
+        grid-area: header;
+    }
+    
+    .slider {
+        grid-area: slider;
+    }
+    
+    footer {
+        grid-area: footer;
+    }
+    
+    #separator{
+        grid-area: separator;
+        display: flex;
+        justify-content: center;
+        color: white; 
+        font-size: xx-large;
+        width: 100%;
+    }
+    
+    .attractions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2%;
+        border-radius: 10%;
+        padding: 10%;
+        height: auto;
+        background-color: rgba(202, 244, 255, 0.4);
+    }
+    
+    .attractions h3 {
+        font-size: xx-large;
+        margin-bottom: 10%;
+    }
+
+    .attractions a {
+        font-size: large;
+        color: white;
+        margin-top: 10%;
+    }
+    
+    #attraction1 {
+        grid-area: attraction1;
+    }
+    
+    #attraction2 {
+        grid-area: attraction2;
+    }
 }
 
-nav {
-    grid-area: nav;
-}
-
-.header {
-    grid-area: header;
-}
-
-.slider {
-    grid-area: slider;
-}
-
-footer {
-    grid-area: footer;
-}
-
-.separator {
-    grid-area: separator;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white; 
-    font-size: 9vw;
-    width: 100%;
-    padding: 20px 0;
-}
-
-.attractions {
-    margin: 2%;
-    border-radius: 10%;
-    padding: 10%;
-    height: auto;
-    background-color: rgba(202, 244, 255, 0.4);
-}
-
-.attractions h3 {
-    font-size: xx-large;
-    margin: 15px;
-}
-
-#attraction1 {
-    grid-area: attraction1;
-}
-
-#attraction2 {
-    grid-area: attraction2;
-}
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){
+    .grid-container-index {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nav nav"
+            "header header"
+            "slider slider"
+            "separator separator"
+            "attraction1 attraction2"
+            "footer footer";
+        justify-content: center;
+    }
+    
+    nav {
+        grid-area: nav;
+    }
+    
+    .header {
+        grid-area: header;
+    }
+    
+    .slider {
+        grid-area: slider;
+    }
+    
+    footer {
+        grid-area: footer;
+    }
+    
+    #separator{
+        grid-area: separator;
+        display: flex;
+        justify-content: center;
+        color: white; 
+        font-size: x-large;
+        width: 100%;
+    }
+    
+    .attractions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2%;
+        border-radius: 10%;
+        padding: 10%;
+        height: auto;
+        background-color: rgba(202, 244, 255, 0.4);
+    }
+    
     .attractions h3 {
         font-size: x-large;
-        margin: 15px;
+        margin-bottom: 10%;
     }
+
+    .attractions a {
+        font-size: medium;
+        color: white;
+        margin-top: 10%;
+    }
+    
+    #attraction1 {
+        grid-area: attraction1;
+    }
+    
+    #attraction2 {
+        grid-area: attraction2;
+    }    
 }
 /*Mobile-------------------------------------*/
 @media only screen and (max-width: 570px){
-    .attractions h3 {
-        font-size: large;
-        margin: 15px;
+    .grid-container-index {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nav nav"
+            "header header"
+            "slider slider"
+            "separator separator"
+            "attraction1 attraction2"
+            "footer footer";
+        justify-content: center;
     }
+    
+    nav {
+        grid-area: nav;
+    }
+    
+    .header {
+        grid-area: header;
+    }
+    
+    .slider {
+        grid-area: slider;
+    }
+    
+    footer {
+        grid-area: footer;
+    }
+    
+    #separator{
+        margin-top: 10%;
+        grid-area: separator;
+        display: flex;
+        justify-content: center;
+        color: white; 
+        font-size: large;
+        width: 100%;
+    }
+    
+    .attractions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2%;
+        border-radius: 10%;
+        padding: 10%;
+        height: auto;
+        background-color: rgba(202, 244, 255, 0.4);
+    }
+    
+    .attractions h3 {
+        font-size: medium;
+        color: #000e1d;
+        margin-bottom: 10%;
+    }
+
+    .attractions a {
+        font-size: small;
+        font-style: bold;
+        color: white;
+        margin-top: 10%;
+    }
+    
+    #attraction1 {
+        grid-area: attraction1;
+    }
+    
+    #attraction2 {
+        grid-area: attraction2;
+    }    
 }
