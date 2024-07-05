@@ -98,7 +98,8 @@ nav {
     z-index: 999;
     left: 0;
     width: 100%;
-    min-height: auto;
+    height: 7vh;
+    min-height: 40px;
     max-height: auto;
     display: flex;
     align-items: center;
