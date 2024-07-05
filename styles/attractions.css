@@ -47,6 +47,12 @@
         height: auto;
         background-color: rgba(202, 244, 255, 0.4);
     }
+
+    .attractions img {
+        width: 80%;
+        height: auto;
+        border-radius: 10%;
+    }
     
     .attractions h3 {
         font-size: xx-large;
